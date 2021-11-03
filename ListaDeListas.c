@@ -36,5 +36,6 @@ void muestraUnNodo_ldl (listaDListas* nodo)
 {
     while (nodo->listArticulo){
      muestraUnArticulo(nodo->listArticulo->dato);
-}
+     nodo->listArticulo = nodo->listArticulo->siguiente;
+    }
 }
