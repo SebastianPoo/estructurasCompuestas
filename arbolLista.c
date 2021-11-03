@@ -31,9 +31,9 @@ nodoArbolLista* agregar_nadl(nodoArbolLista* nadl, nodoArbolLista* nuevo)
     return nadl;
 }
 
-nodoArbolLista* archivo2Arbol (char archivo[])
+nodoArbolLista* alta_nadl(nodoArbolLista* adl, stCliente c, stArticulo a)
 {
-    nodoArbolLista* adl=ini
+    nodoArticulo* nuevoArt=inicLista();
 
     return adl;
 }
