@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1635964691 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\estructurascompuestas\arbollista.c
+1635964812 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\estructurascompuestas\arbollista.c
 	<stdio.h>
 	<stdlib.h>
 	"string.h"
 	"arbolLista.h"
 	"ventas.h"
 
-1635963135 e:\sebastian\utn\programacion\codigos -2ºcuatri\estructurascompuestas\arbollista.h
+1635965029 e:\sebastian\utn\programacion\codigos -2ºcuatri\estructurascompuestas\arbollista.h
 	"cliente.h"
 	"listaArticulos.h"
 
@@ -17,7 +17,7 @@
 
 1635961996 e:\sebastian\utn\programacion\codigos -2ºcuatri\estructurascompuestas\articulo.h
 
-1635963003 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\estructurascompuestas\articulo.c
+1635971406 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\estructurascompuestas\articulo.c
 	<stdio.h>
 	<string.h>
 	<string.h>

@@ -7,9 +7,9 @@
 
 void muestraUnArticulo(stArticulo a)
 {
-    printf("\nArticulo....................: %s", a.articulo );
+    printf("\nArticulo.....................: %s", a.articulo );
     printf("\nMarca........................: %s", a.marca);
-    printf("\nRubro.......................: (%s)", a.rubro);
+    printf("\nRubro........................: %s", a.rubro);
     printf("\nPrecio.......................: %f", a.precio);
     printf("\nCantidad.....................: %d", a.cantidad);
 }
