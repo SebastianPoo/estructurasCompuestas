@@ -39,3 +39,22 @@ void muestraUnNodo_ldl (listaDListas* nodo)
      nodo->listArticulo = nodo->listArticulo->siguiente;
     }
 }
+
+listaDListas* alta_ldl (listaDListas* lista, stCliente c, stArticulo a)
+{
+    nodoArticulo* nuevoArt = crear_nodoArt(a);
+    listaDListas* respuesta = inicListaDListas();
+    respuesta=buscarClienteLista (lista, c.cuilCliente);
+
+    return lista;
+}
+
+listaDListas* buscarClienteLista (listaDListas* lista, char cuil [])
+{
+    listaDListas* respuesta = inicListaDListas();
+
+
+    return respuesta;
+}
+
+//int cantidadDeProductos (listaDListas* lista, float precio, char cuil[])

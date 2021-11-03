@@ -45,7 +45,9 @@ nodoArbolLista* alta_nadl(nodoArbolLista* adl, stCliente c, stArticulo a)
     if(respuesta==NULL)
     {
         nodoArbolLista* nuevoNodoArb=crear_nadl(c);
+        nuevoNodoArb->articulo = agregarAlPrincipio(nuevoNodoArb->articulo, nuevoArt);
         adl=agregar_nadl(adl,nuevoNodoArb);
+
     }
     else
     {
@@ -83,6 +85,36 @@ nodoArbolLista* buscarCliente(nodoArbolLista* adl, char cuil[])
     return respuesta;
 }
 
+int cuentaProductos (nodoArbolLista* cliente, float filtro)
+{
+    int cont=0;
+        while(cliente->articulo)
+        {
+            if (cliente->articulo->dato.precio > filtro)
+            {
+                cont++;
+            }
+            cliente->articulo = cliente->articulo->siguiente;
+        }
+
+    return cont;
+}
+
+
+float sumaCosto (nodoArbolLista* cliente, char filtro[])
+{
+    float costo=0;
+    if (cliente->articulo){
+            if(strcmp(cliente->articulo->dato.marca, filtro)==0){
+                costo = cliente->articulo->dato.precio + sumaCosto(cliente->articulo->siguiente,filtro);
+            }else{
+                costo = sumaCosto(cliente->articulo->siguiente,filtro);
+            }
+    }
+    return costo;
+}
+
+
 nodoArbolLista* archivo2Arbol (char archivo [])
 {
     nodoArbolLista* adl = inicNodoArbolLista();
@@ -91,8 +123,10 @@ nodoArbolLista* archivo2Arbol (char archivo [])
     stArticulo a;
 
     FILE *archi = fopen(archivo, "rb");
-    if(archi){
-        while(fread(&v,sizeof(stVentas),1,archi)>0){
+    if(archi)
+    {
+        while(fread(&v,sizeof(stVentas),1,archi)>0)
+        {
             strcpy(c.apellidoCliente,v.apellidoCliente);
             strcpy(c.cuilCliente,v.cuilCliente);
             strcpy(c.nombreCliente,v.nombreCliente);
