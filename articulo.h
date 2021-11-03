@@ -9,5 +9,7 @@ typedef struct {
     int cantidad;
 }stArticulo;
 
+void muestraUnArticulo(stArticulo a);
+void getRubro(int nro, char rubro[]);
 
 #endif // ARTICULO_H_INCLUDED

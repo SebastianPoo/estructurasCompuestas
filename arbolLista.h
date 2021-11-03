@@ -10,6 +10,11 @@ typedef struct _nodoArbolLista{
     struct _nodoArbolLista* der;
 }nodoArbolLista;
 
-
+nodoArbolLista* buscarCliente(nodoArbolLista* adl, char cuil[]);
+nodoArbolLista* alta_nadl(nodoArbolLista* adl, stCliente c, stArticulo a);
+nodoArbolLista* agregar_nadl(nodoArbolLista* nadl, nodoArbolLista* nuevo);
+nodoArbolLista* crear_nadl(stCliente c);
+nodoArbolLista* inicNodoArbolLista();
+nodoArbolLista* archivo2Arbol (char archivo []);
 
 #endif // ARBOLLISTA_H_INCLUDED

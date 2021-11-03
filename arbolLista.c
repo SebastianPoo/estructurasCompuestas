@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "string.h"
 #include "arbolLista.h"
+#include "ventas.h"
 
 nodoArbolLista* inicNodoArbolLista()
 {
@@ -19,12 +20,18 @@ nodoArbolLista* crear_nadl(stCliente c)
 
 nodoArbolLista* agregar_nadl(nodoArbolLista* nadl, nodoArbolLista* nuevo)
 {
-    if (nadl==NULL){
+    if (nadl==NULL)
+    {
         nadl=nuevo;
-    }else{
-        if(strcmp(nadl->dato.cuilCliente,nuevo->dato.cuilCliente)<0){
+    }
+    else
+    {
+        if(strcmp(nadl->dato.cuilCliente,nuevo->dato.cuilCliente)<0)
+        {
             nadl->izq=agregar_nadl(nadl->izq, nuevo);
-        }else{
+        }
+        else
+        {
             nadl->der=agregar_nadl(nadl->der, nuevo);
         }
     }
@@ -33,8 +40,70 @@ nodoArbolLista* agregar_nadl(nodoArbolLista* nadl, nodoArbolLista* nuevo)
 
 nodoArbolLista* alta_nadl(nodoArbolLista* adl, stCliente c, stArticulo a)
 {
-    nodoArticulo* nuevoArt=inicLista();
+    nodoArticulo* nuevoArt=crear_nodoArt(a);
+    nodoArbolLista* respuesta = buscarCliente(adl, c.cuilCliente);
+    if(respuesta==NULL)
+    {
+        nodoArbolLista* nuevoNodoArb=crear_nadl(c);
+        adl=agregar_nadl(adl,nuevoNodoArb);
+    }
+    else
+    {
+        respuesta->articulo=agregarAlPrincipio(respuesta->articulo,nuevoArt);
+    }
 
     return adl;
 }
 
+nodoArbolLista* buscarCliente(nodoArbolLista* adl, char cuil[])
+{
+    nodoArbolLista* respuesta = inicNodoArbolLista();
+    if(adl==NULL)
+    {
+        respuesta = NULL;
+    }
+    else
+    {
+        if(strcmp(adl->dato.cuilCliente, cuil)==0)
+        {
+            respuesta=adl;
+        }
+        else
+        {
+            if(strcmp(adl->dato.cuilCliente, cuil)>0)
+            {
+                respuesta=buscarCliente(adl->der, cuil);
+            }
+            else
+            {
+                respuesta=buscarCliente(adl->izq, cuil);
+            }
+        }
+    }
+    return respuesta;
+}
+
+nodoArbolLista* archivo2Arbol (char archivo [])
+{
+    nodoArbolLista* adl = inicNodoArbolLista();
+    stVentas v;
+    stCliente c;
+    stArticulo a;
+
+    FILE *archi = fopen(archivo, "rb");
+    if(archi){
+        while(fread(&v,sizeof(stVentas),1,archi)>0){
+            strcpy(c.apellidoCliente,v.apellidoCliente);
+            strcpy(c.cuilCliente,v.cuilCliente);
+            strcpy(c.nombreCliente,v.nombreCliente);
+            strcpy(a.articulo,v.articulo);
+            strcpy(a.marca,v.marca);
+            strcpy(a.rubro,v.rubro);
+            a.cantidad = v.cantidad;
+            a.precio = v.precio;
+            adl=alta_nadl(adl,c,a);
+        }
+        fclose(archi);
+    }
+    return adl;
+}
