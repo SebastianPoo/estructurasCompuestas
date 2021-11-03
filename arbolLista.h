@@ -11,5 +11,5 @@ typedef struct _nodoArbolLista{
 }nodoArbolLista;
 
 
-nodoArbolLista
+
 #endif // ARBOLLISTA_H_INCLUDED
