@@ -1,8 +1,3 @@
-#ifndef ARBOLLISTA_H_INCLUDED
-#define ARBOLLISTA_H_INCLUDED
-#include "cliente.h"
-#include "listaArticulos.h"
-
 typedef struct _nodoArbolLista{
     stCliente dato;
     nodoArticulo* articulo;
@@ -19,4 +14,3 @@ nodoArbolLista* archivo2Arbol (char archivo []);
 nodoArbolLista* buscaNodoArbolClientePorNombre(nodoArbolLista* arbol, char nombreCliente[]);
 int cuentaProductos (nodoArbolLista* cliente, float filtro);
 float sumaCosto (nodoArbolLista* cliente, char filtro[]);
-#endif // ARBOLLISTA_H_INCLUDED

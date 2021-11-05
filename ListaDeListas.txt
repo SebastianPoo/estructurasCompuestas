@@ -1,8 +1,3 @@
-#ifndef LISTADELISTAS_H_INCLUDED
-#define LISTADELISTAS_H_INCLUDED
-#include "cliente.h"
-#include "listaArticulos.h"
-
 typedef struct _listaDListas{
     stCliente dato;
     nodoArticulo* listArticulo;
@@ -16,6 +11,3 @@ void mostrarLista_ldl (listaDListas* lista);
 listaDListas* agregarAlPrincipio_ldl (listaDListas* lista, listaDListas* nuevo);
 listaDListas* crear_ldl (stCliente c);
 listaDListas* inicListaDListas ();
-
-
-#endif // LISTADELISTAS_H_INCLUDED

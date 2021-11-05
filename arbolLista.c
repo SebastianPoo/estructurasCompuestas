@@ -60,42 +60,57 @@ nodoArbolLista* alta_nadl(nodoArbolLista* adl, stCliente c, stArticulo a)
 nodoArbolLista* buscarCliente(nodoArbolLista* adl, char cuil[])
 {
     nodoArbolLista* respuesta = inicNodoArbolLista();
-    if(adl==NULL)
-    {
-        respuesta = NULL;
-    }
-    else
-    {
-        if(strcmp(adl->dato.cuilCliente, cuil)==0)
+    if(adl)
+        if(strcmp(cuil,adl->dato.cuilCliente)==0)
         {
             respuesta=adl;
         }
         else
         {
-            if(strcmp(adl->dato.cuilCliente, cuil)>0)
+            if(strcmp(cuil,adl->dato.cuilCliente)>0)
             {
                 respuesta=buscarCliente(adl->der, cuil);
             }
-            else
+            if(respuesta==NULL);
             {
                 respuesta=buscarCliente(adl->izq, cuil);
             }
         }
-    }
     return respuesta;
 }
 
+nodoArbolLista* buscaNodoArbolClientePorNombre(nodoArbolLista* arbol, char nombreCliente[])
+{
+    nodoArbolLista* respuesta = NULL;
+    if(arbol)
+    {
+        if(strcmp(nombreCliente, arbol->dato.nombreCliente)==0)
+        {
+            respuesta = arbol;
+        }
+        else
+        {
+            respuesta = buscaNodoArbolClientePorNombre(arbol->izq, nombreCliente);
+            if(respuesta == NULL)
+            {
+                respuesta = buscaNodoArbolClientePorNombre(arbol->der, nombreCliente);
+            }
+        }
+    }
+
+    return respuesta;
+}
 int cuentaProductos (nodoArbolLista* cliente, float filtro)
 {
     int cont=0;
-        while(cliente->articulo)
+    while(cliente->articulo)
+    {
+        if (cliente->articulo->dato.precio > filtro)
         {
-            if (cliente->articulo->dato.precio > filtro)
-            {
-                cont++;
-            }
-            cliente->articulo = cliente->articulo->siguiente;
+            cont++;
         }
+        cliente->articulo = cliente->articulo->siguiente;
+    }
 
     return cont;
 }
@@ -104,12 +119,16 @@ int cuentaProductos (nodoArbolLista* cliente, float filtro)
 float sumaCosto (nodoArbolLista* cliente, char filtro[])
 {
     float costo=0;
-    if (cliente->articulo){
-            if(strcmp(cliente->articulo->dato.marca, filtro)==0){
-                costo = cliente->articulo->dato.precio + sumaCosto(cliente->articulo->siguiente,filtro);
-            }else{
-                costo = sumaCosto(cliente->articulo->siguiente,filtro);
-            }
+    if (cliente->articulo)
+    {
+        if(strcmp(cliente->articulo->dato.marca, filtro)==0)
+        {
+            costo = cliente->articulo->dato.precio + sumaCosto(cliente->articulo->siguiente,filtro);
+        }
+        else
+        {
+            costo = sumaCosto(cliente->articulo->siguiente,filtro);
+        }
     }
     return costo;
 }
@@ -140,4 +159,24 @@ nodoArbolLista* archivo2Arbol (char archivo [])
         fclose(archi);
     }
     return adl;
+}
+
+nodoArbolLista* arrayToArbol (stCliente c[], int base, int tope)
+{
+    int medio;
+
+    nodoArbolLista* arbol=NULL;
+
+    if(!(base>tope))
+    {
+
+        medio=(base+tope)/2;
+
+        arbol=crear_nadl(c[medio]);
+
+        arbol->izq=arrayToArbol(c,base,medio-1);
+        arbol->der=arrayToArbol(c,medio+1,tope);
+    }
+
+    return arbol;
 }

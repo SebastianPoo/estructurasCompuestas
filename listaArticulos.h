@@ -11,4 +11,5 @@ nodoArticulo* inicLista();
 nodoArticulo* crear_nodoArt (stArticulo a);
 nodoArticulo* agregarAlPrincipio (nodoArticulo* lista, nodoArticulo* nuevo);
 
+
 #endif // LISTAARTICULOS_H_INCLUDED

@@ -1,18 +1,18 @@
 # depslib dependency file v1.0
-1635977541 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\estructurascompuestas\arbollista.c
+1636052970 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\estructurascompuestas\arbollista.c
 	<stdio.h>
 	<stdlib.h>
 	"string.h"
 	"arbolLista.h"
 	"ventas.h"
 
-1635965029 e:\sebastian\utn\programacion\codigos -2ºcuatri\estructurascompuestas\arbollista.h
+1636052704 e:\sebastian\utn\programacion\codigos -2ºcuatri\estructurascompuestas\arbollista.h
 	"cliente.h"
 	"listaArticulos.h"
 
 1635902255 e:\sebastian\utn\programacion\codigos -2ºcuatri\estructurascompuestas\cliente.h
 
-1635955512 e:\sebastian\utn\programacion\codigos -2ºcuatri\estructurascompuestas\listaarticulos.h
+1636053286 e:\sebastian\utn\programacion\codigos -2ºcuatri\estructurascompuestas\listaarticulos.h
 	"articulo.h"
 
 1635961996 e:\sebastian\utn\programacion\codigos -2ºcuatri\estructurascompuestas\articulo.h
@@ -25,7 +25,7 @@
 
 1635900707 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\estructurascompuestas\cliente.c
 
-1635901303 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\estructurascompuestas\main.c
+1636050847 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\estructurascompuestas\main.c
 	<stdio.h>
 	<stdlib.h>
 
@@ -39,4 +39,25 @@
 	"articulo.h"
 
 1635902255 e:\sebastian\utn\programacion\codigos -2ºcuatri\estructurascompuestas\ventas.h
+
+1636050807 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\estructurascompuestas\listadelistas.c
+	<stdio.h>
+	<string.h>
+	<string.h>
+	"articulo.h"
+	"ListaDeListas.h"
+
+1636053286 e:\sebastian\utn\programacion\codigos -2ºcuatri\estructurascompuestas\listadelistas.h
+	"cliente.h"
+	"listaArticulos.h"
+
+1636074110 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\estructurascompuestas\arreglolistas.c
+	<stdio.h>
+	<stdlib.h>
+	"strings.h"
+	"arregloListas.h"
+
+1636054156 e:\sebastian\utn\programacion\codigos -2ºcuatri\estructurascompuestas\arreglolistas.h
+	"cliente.h"
+	"listaArticulos.h"
 
