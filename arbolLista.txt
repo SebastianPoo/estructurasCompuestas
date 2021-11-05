@@ -14,3 +14,8 @@ nodoArbolLista* archivo2Arbol (char archivo []);
 nodoArbolLista* buscaNodoArbolClientePorNombre(nodoArbolLista* arbol, char nombreCliente[]);
 int cuentaProductos (nodoArbolLista* cliente, float filtro);
 float sumaCosto (nodoArbolLista* cliente, char filtro[]);
+
+Faltan
+muestra arbol
+muestra un nodo de arbol (un cliente)
+uno tendria que poder mostrar cualquier campo tanto del cliente como del producto

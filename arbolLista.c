@@ -100,6 +100,29 @@ nodoArbolLista* buscaNodoArbolClientePorNombre(nodoArbolLista* arbol, char nombr
 
     return respuesta;
 }
+
+nodoArticulo* buscaListaArtEnArbol (nodoArbolLista* arbol, char nombreCliente[])
+{
+    nodoArticulo* respuesta = inicLista();
+    if(arbol)
+    {
+        if(strcmp(nombreCliente, arbol->dato.nombreCliente)==0)
+        {
+            respuesta = arbol->articulo;
+        }
+        else
+        {
+            respuesta = buscaListaArtEnArbol(arbol->izq, nombreCliente);
+            if(respuesta == NULL)
+            {
+                respuesta = buscaListaArtEnArbol(arbol->der, nombreCliente);
+            }
+        }
+    }
+
+    return respuesta;
+}
+
 int cuentaProductos (nodoArbolLista* cliente, float filtro)
 {
     int cont=0;
@@ -134,7 +157,7 @@ float sumaCosto (nodoArbolLista* cliente, char filtro[])
 }
 
 
-nodoArbolLista* archivo2Arbol (char archivo [])
+nodoArbolLista* archivoToArbol (char archivo [])
 {
     nodoArbolLista* adl = inicNodoArbolLista();
     stVentas v;
@@ -180,3 +203,4 @@ nodoArbolLista* arrayToArbol (stCliente c[], int base, int tope)
 
     return arbol;
 }
+

@@ -1,17 +1,16 @@
-#ifndef ARREGLOLISTAS_H_INCLUDED
-#define ARREGLOLISTAS_H_INCLUDED
-#include "cliente.h"
-#include "listaArticulos.h"
-
-
 typedef struct _stCeldas{
     stCliente dato;
     nodoArticulo* articulo;
 }stCeldas;
 
 int alta_arreListas (stCeldas* arrayListas[], stCliente c, int validos, stArticulo a);
-int buscaEnCeldas (stCeldas* arreglo[], int validos, stCliente c);
+int buscaEnCeldas (stCeldas* arreglo[], int validos, stCliente c);		ARREGLAR. BUSCAR POR CUIL
 int agregarEnArreglo (stCeldas* arreglo[], int validos, stCliente c);
 int celdaToArregloDeNombres (stCeldas* arreglo[], char apellidos[][30], int valCeldas, int dim, stCliente c);
-
-#endif // ARREGLOLISTAS_H_INCLUDED
+Faltan
+archivo a celda
+cuenta productos de un cliente
+suma precio de un determinado producto y cliente
+muestra arreglo
+muestra un cliente del arreglo con sus productos
+uno tendria que elejir que mostrar de cada cliente. 

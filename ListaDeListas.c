@@ -45,9 +45,17 @@ void muestraUnNodo_ldl (listaDListas* nodo)
 listaDListas* alta_ldl (listaDListas* lista, stCliente c, stArticulo a)
 {
     nodoArticulo* nuevoArt = crear_nodoArt(a);
-    listaDListas* respuesta = inicListaDListas();
-    respuesta=buscarClienteLista (lista, c.cuilCliente);
-
+    listaDListas* respuesta = buscarClienteLista (lista, c.cuilCliente);
+    if (respuesta==NULL)
+    {
+        listaDListas* clienNuevo = crear_ldl(c);
+        clienNuevo->listArticulo = agregarAlPrincipio(clienNuevo->listArticulo, nuevoArt);
+        lista = agregarAlPrincipio_ldl(lista,clienNuevo);
+    }
+    else
+    {
+        respuesta->listArticulo = agregarAlPrincipio(respuesta->listArticulo, nuevoArt);
+    }
     return lista;
 }
 

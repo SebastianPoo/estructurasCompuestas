@@ -11,3 +11,9 @@ void mostrarLista_ldl (listaDListas* lista);
 listaDListas* agregarAlPrincipio_ldl (listaDListas* lista, listaDListas* nuevo);
 listaDListas* crear_ldl (stCliente c);
 listaDListas* inicListaDListas ();
+
+Faltan
+lista to arreglo apellidos
+mostrar campos de cada cliente o producto
+suma costos de un determinado producto o marca
+contar productos de un determinado costo o marca

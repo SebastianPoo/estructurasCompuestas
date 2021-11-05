@@ -61,3 +61,65 @@
 	"cliente.h"
 	"listaArticulos.h"
 
+1635971406 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\articulo.c
+	<stdio.h>
+	<string.h>
+	<string.h>
+	"articulo.h"
+
+1635961996 e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\articulo.h
+
+1635900707 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\cliente.c
+
+1636137130 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\listaarticulos.c
+	<stdio.h>
+	<stdlib.h>
+	"string.h"
+	"listaArticulos.h"
+	"articulo.h"
+
+1636137512 e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\listaarticulos.h
+	"articulo.h"
+
+1636050807 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\listadelistas.c
+	<stdio.h>
+	<string.h>
+	<string.h>
+	"articulo.h"
+	"ListaDeListas.h"
+
+1636053286 e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\listadelistas.h
+	"cliente.h"
+	"listaArticulos.h"
+
+1635902255 e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\cliente.h
+
+1636050847 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1635901262 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\ventas.c
+
+1636124458 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\arbollista.c
+	<stdio.h>
+	<stdlib.h>
+	"string.h"
+	"arbolLista.h"
+	"ventas.h"
+
+1636052704 e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\arbollista.h
+	"cliente.h"
+	"listaArticulos.h"
+
+1635902255 e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\ventas.h
+
+1636136659 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\arreglolistas.c
+	<stdio.h>
+	<stdlib.h>
+	"strings.h"
+	"arregloListas.h"
+
+1636137024 e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\arreglolistas.h
+	"cliente.h"
+	"listaArticulos.h"
+

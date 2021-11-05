@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "strings.h"
-
 #include "arregloListas.h"
 
 
@@ -44,3 +43,17 @@ int agregarEnArreglo (stCeldas* arreglo[], int validos, stCliente c)
 
     return validos;
 }
+
+int celdaToArregloDeNombres (stCeldas* arreglo[], char apellidos[][30], int valCeldas, int dim, stCliente c)
+{
+    int i = 0;
+    int a = 0;
+    while (i < valCeldas && a < dim){
+        strcpy(apellidos[a],arreglo[i]->dato.apellidoCliente);
+        i++;
+        a++;
+    }
+    return a;
+}
+
+

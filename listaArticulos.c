@@ -35,3 +35,27 @@ void muestraUnNodo(nodoArticulo* nodo)
 {
         muestraUnArticulo(nodo->dato);
 }
+
+int arregloCharDeLista  (nodoArticulo* lista, char marcas[][20])
+{
+    int i = 0;
+    int dim = cuentaLista(lista);
+    while(lista && i < dim){
+        strcpy(marcas[i],lista->dato.marca);
+        lista = lista->siguiente;
+        i++;
+    }
+    return i;
+}
+
+int cuentaLista(nodoArticulo* lista)
+{
+    int cont=0;
+
+    while(lista)
+    {
+        cont++;
+        lista = lista->siguiente;
+    }
+    return cont;
+}
