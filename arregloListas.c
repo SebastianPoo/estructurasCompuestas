@@ -44,11 +44,11 @@ int agregarEnArreglo (stCeldas* arreglo[], int validos, stCliente c)
     return validos;
 }
 
-int celdaToArregloDeNombres (stCeldas* arreglo[], char apellidos[][30], int valCeldas, int dim, stCliente c)
+int celdaToArregloDeNombres (stCeldas* arreglo[], char apellidos[][30], int valCeldas, stCliente c)
 {
     int i = 0;
     int a = 0;
-    while (i < valCeldas && a < dim){
+    while (i < valCeldas && a < valCeldas){
         strcpy(apellidos[a],arreglo[i]->dato.apellidoCliente);
         i++;
         a++;

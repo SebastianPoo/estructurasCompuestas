@@ -14,5 +14,6 @@ int arregloCharDeLista  (nodoArticulo* lista, char marcas[][20]);
 int cuentaLista(nodoArticulo* lista);
 void muestraUnNodo(nodoArticulo* nodo);
 void mostrarLista (nodoArticulo* lista);
+int cuentaProduc (nodoArticulo* lista, char marca[]);
 
 #endif // LISTAARTICULOS_H_INCLUDED

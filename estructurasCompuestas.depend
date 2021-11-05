@@ -113,13 +113,13 @@
 
 1635902255 e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\ventas.h
 
-1636136659 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\arreglolistas.c
+1636146878 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\arreglolistas.c
 	<stdio.h>
 	<stdlib.h>
 	"strings.h"
 	"arregloListas.h"
 
-1636137024 e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\arreglolistas.h
+1636147043 e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\arreglolistas.h
 	"cliente.h"
 	"listaArticulos.h"
 

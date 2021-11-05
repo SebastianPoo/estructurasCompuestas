@@ -16,6 +16,6 @@ void mostrarLista_ldl (listaDListas* lista);
 listaDListas* agregarAlPrincipio_ldl (listaDListas* lista, listaDListas* nuevo);
 listaDListas* crear_ldl (stCliente c);
 listaDListas* inicListaDListas ();
-
+int listaToArreglo_Apellidos (listaDListas* lista, char apellidos[][30]);
 
 #endif // LISTADELISTAS_H_INCLUDED

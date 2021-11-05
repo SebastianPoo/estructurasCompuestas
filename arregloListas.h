@@ -12,6 +12,5 @@ typedef struct _stCeldas{
 int alta_arreListas (stCeldas* arrayListas[], stCliente c, int validos, stArticulo a);
 int buscaEnCeldas (stCeldas* arreglo[], int validos, stCliente c);
 int agregarEnArreglo (stCeldas* arreglo[], int validos, stCliente c);
-int celdaToArregloDeNombres (stCeldas* arreglo[], char apellidos[][30], int valCeldas, int dim, stCliente c);
-
+int celdaToArregloDeNombres (stCeldas* arreglo[], char apellidos[][30], int valCeldas, stCliente c);
 #endif // ARREGLOLISTAS_H_INCLUDED

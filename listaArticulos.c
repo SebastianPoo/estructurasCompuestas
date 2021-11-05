@@ -59,3 +59,17 @@ int cuentaLista(nodoArticulo* lista)
     }
     return cont;
 }
+
+int cuentaProduc (nodoArticulo* lista, char marca[])
+{
+    int cant = 0;
+    while(lista)
+    {
+        if (strcmp(lista->dato.marca, marca)==0)
+        {
+            cant++;
+        }
+        lista = lista->siguiente;
+    }
+    return cant;
+}

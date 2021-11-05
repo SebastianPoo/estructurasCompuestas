@@ -73,3 +73,28 @@ listaDListas* buscarClienteLista (listaDListas* lista, char cuil [])
     return respuesta;
 }
 
+int listaToArreglo_Apellidos (listaDListas* lista, char apellidos[][30])
+{
+    int i = 0;
+    int dim = cuentaLista_ldl(lista);
+    while (lista && i<=dim)
+    {
+        strcpy(apellidos[i],lista->dato.apellidoCliente);
+        lista = lista->siguiente;
+        i++;
+    }
+    return i;
+}
+
+int cuentaLista_ldl( listaDListas* lista)
+{
+    int cant = 0;
+    while(lista)
+    {
+        cant++;
+        lista = lista->siguiente;
+
+    }
+    return cant;
+}
+
