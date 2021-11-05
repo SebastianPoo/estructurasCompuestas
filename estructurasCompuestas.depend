@@ -71,24 +71,24 @@
 
 1635900707 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\cliente.c
 
-1636137130 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\listaarticulos.c
+1636151774 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\listaarticulos.c
 	<stdio.h>
 	<stdlib.h>
 	"string.h"
 	"listaArticulos.h"
 	"articulo.h"
 
-1636137512 e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\listaarticulos.h
+1636151979 e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\listaarticulos.h
 	"articulo.h"
 
-1636050807 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\listadelistas.c
+1636151774 source:e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\listadelistas.c
 	<stdio.h>
 	<string.h>
 	<string.h>
 	"articulo.h"
 	"ListaDeListas.h"
 
-1636053286 e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\listadelistas.h
+1636151774 e:\sebastian\utn\programacion\codigos -2ºcuatri\en git\estructurascompuestas\listadelistas.h
 	"cliente.h"
 	"listaArticulos.h"
 
